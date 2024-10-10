@@ -8,13 +8,17 @@ class My_string:
         self.texto = list(texto)
 
     def obtener(self, indice:int =None) -> str:
-        None
+        if not indice:
+            return "".join(self.texto)
+        else:
+            return self.texto[indice]
         
     def longitud(self) -> int:
-        None
+        return len(self.texto)
     
     def concatenar (self,texto_nuevo: str) -> None:
-        None
+        for caracter in texto_nuevo:
+            self.texto.append(caracter)
             
 
 if __name__ == "__main__":
